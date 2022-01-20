@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* HEADER */
+
+header {
+    margin-top: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color: #333;
+}
+
+header .logo {
+    margin-left: 10%;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to bottom, #f00, #f00, 45%, #2d2d2d 45%, #2d2d2d 55%, #fff 55%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header nav {
+    width: 60%;
+    font-size: 1.3rem;
+}
+
+header nav .navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav li {
+    margin: 5px;
+}
+
+header nav a {
+    color: #fff; 
+    transition: 1s;
+}
+
+header nav a:hover {
+    color: #f00;
+    font-size: 2rem;
+}
+
+@media (max-width: 1062px) {
+    header {
+        flex-direction: column;
+    }
+    header .logo {
+        margin-left: 0;
+    }
+    header nav {
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    header nav .navigation {
+        flex-wrap: wrap;
+    }
+    header nav a:hover {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 460px) {
+    header nav {
+        font-size: 1rem;
+    }
+    header nav a:hover {
+        font-size: 1rem;
+    }
+}
+
+/* HERO BANNER */
+
+.hero-banner {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.hero-banner .hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(img/pokemons.png);
+    background-size: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.hero-banner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.8;
+}
+
+.hero-banner .text {
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    width: 40%;
+    min-width: 40%;
+    text-align: center;       
+    transform: translateY(-50%);
+    color: #fff; 
+}
+
+.hero-banner h1 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.hero-banner h1 span {
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: 5px;
+    background-image: linear-gradient(to bottom, #f00, #f00, 45%, #2d2d2d 45%, #2d2d2d 55%, #fff 55%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-banner h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+.hero-banner h3 span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn {
+    padding: 10px 70px;
+    background: #f00;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    opacity: 0.6;
+    transition: 0.5s;
+    color: #fff; 
+}
+
+.btn:hover {
+    letter-spacing: 10px;
+    opacity: 1;
+}
+
+@media (max-width: 1062px) {
+    .hero-banner .text {
+        left: 20%;
+        width: 60%;
+    }
+    .hero-banner h1 {
+        font-size: 2.5rem;
+    }
+    .hero-banner h1 span {
+        font-size: 3.5rem;
+    }
+    .hero-banner h3 {
+        font-size: 1rem;
+    }
+    .hero-banner h3 span {
+        font-size: 1.1rem;
+    }
+    .btn {
+        font-size: 1.1rem;
+    }
+    .btn:hover {
+        letter-spacing: 5px;
+    }
+}
+
+@media (max-width: 460px) {
+    .hero-banner .text {
+        left: 5%;
+        width: 90%;
+    }
+    .hero-banner h1 {
+        font-size: 2rem;
+    }
+    .hero-banner h1 span {
+        font-size: 3rem;
+    }
+    .btn {
+        padding: 10px 50px;
+    }
+    .btn:hover {
+        letter-spacing: 1px;
+    }
+}
+
+/* STARTER POKEMONS */
+
+.starter-section {
+    color: #666;
+    margin: 100px 0;
+    text-align: center;
+}
+
+.starter-section h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.starter-section p {
+    font-size: 1.3rem;
+}
+
+.starter-section .container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.starter-section .card {
+    width: 30%;
+    padding: 50px;
+}
+
+.starter-section img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.starter-section h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.starter-section .card p {
+    margin: 0 20% 0 20%;
+    font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+    .starter-section .container {
+        flex-direction: column;
+    }
+    .starter-section .card {
+        width: 100%;
+        padding: 50px;
+    }
+    
+}
+
+/* POKE EVOLUTIONS */
+.evolutions {
+    background-color: #2d2d2d;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.evolutions h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.evolutions p {
+    font-size: 1.3rem;
+    border-bottom: 10px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #f00, #2d2d2d, 70%, #2d2d2d 70%, #fff 80%, #fff 80%);
+}
+
+.evolutions .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 20px 100px;
+}
+
+.evolutions img {
+    padding: 35px;
+    align-self: baseline;
+    max-height: 80vh; 
+}
+
+.evolutions .one{
+    width: 20%;
+}
+
+.evolutions .two{
+    width: 30%;
+}
+
+.evolutions .three{
+    width: 50%;
+}
+
+@media (max-width: 900px) {
+    .evolutions .container {
+        flex-direction: column;
+        padding-top: 70px;
+        margin-bottom: 0;
+    }
+    .evolutions .one {
+        align-self: center;
+        width: 40%;
+    }
+    .evolutions .two {
+        align-self: center;
+        width: 60%;
+    }
+    .evolutions .three {
+       align-self: center;
+       width: 90%;
+       padding-bottom: 70px;
+    }
+}
+
+/* SUBSCRIBE SECTION*/
+.subscribe-section {
+    color: #666;
+    margin: 100px 0;
+    text-align: center;
+}
+
+.subscribe-section h3 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.subscribe-section p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.subscribe-section .container {
+    display: flex;
+    justify-content: center;
+}
+
+.subscribe-section .container input {
+    width: 30%;
+    border: 3px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #f00, #2d2d2d, 70%, #2d2d2d 70%, #fff 80%, #fff 80%);
+    font-size: 1rem;
+    padding-left: 50px;
+}
+
+.subscribe-section .container input::placeholder {
+    opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+    .subscribe-section .container {
+        flex-direction: column;
+        width: 80%;
+        margin-left: 10%;
+    }
+    .subscribe-section .container input {
+        width: 100%;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    background-color: #666;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.contact-section h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.contact-section p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.contact-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .info {
+    height: 300px;
+    padding: 20px;
+    flex-basis: 30%;
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.container .info i {
+    color: #2d2d2d;
+    font-size: 2rem;
+}
+
+.container .info p {
+    padding-bottom: 10px;
+}
+
+.container .contact-form {
+    flex-basis: 30%;
+}
+
+.container .contact-form .container2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.contact-section .contact-form input {
+    width: 100%;
+    border: 3px solid;
+    background-color: #666;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #f00, #2d2d2d, 70%, #2d2d2d 70%, #fff 80%, #fff 80%);
+    font-size: 1rem;
+    padding-left: 50px;
+    color: #fff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-section .contact-form input::placeholder {
+    opacity: 0.8;
+    color: #fff;
+}
+
+@media (max-width: 1062px) {
+    .container .info {
+        flex-basis: 45%;
+    }
+    .container .contact-form {
+        flex-basis: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-section .container {
+        flex-direction: column;
+    }
+    .container .info {
+        flex-basis: 80%;
+    }
+    .container .contact-form {
+        flex-basis: 80%;
+    }
+}
+
+/* FOOTER */
+footer {
+    background-color: #2d2d2d;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #fff;
+    transition: 1s;
+}
+
+footer a:hover {
+    font-size: 2rem;
+    color: #f00;
+}
+
+footer a.social {
+    font-size: 2rem;
+    transition: 1s;
+    padding: 0 10px;
+}
+
+footer a.social:hover {
+    font-size: 3rem;
+}
